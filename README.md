@@ -72,3 +72,4 @@ Again, for example, you could apply a custom transition or crop the image:
 This library is shared under **Apache License 2.0**.
 
 #### Made with ♥ by 2 Coffees 1 Tea(m).
+We're Glid.. ehm... Glad to help you :D
