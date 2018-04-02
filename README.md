@@ -1,13 +1,35 @@
 # GlideToVectorYou
-Load SVG in Android with Glide
+Load SVGs with Glide
 
 ## Introduction
 GlideToVectorYou enables you to easily load your remote vector images (only .svg are supported for now) like other image formats.
+
 The library is based on Glide and offers the same functionalities + svg support.
+
+## How to use
+
+Add JitPack in your **root *build.gradle*** at the end of repositories:
+
+```gradle
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+ ```
+ 
+ Add the dependency in your **app *build.gradle***:
+ 
+ ```
+ 	dependencies {
+	        compile 'com.github.2coffees1team:GlideToVectorYou:v1.0'
+	}
+ ```
 
 **There are 3 ways to use this library.**
 
-### Lazy way
+## Lazy way
 You just have to use a method:
 
 ```java
@@ -18,7 +40,7 @@ The svg will be automatically downloaded and inserted in your target Image View.
 
 *Easy eh?*
 
-### Normal way
+## Normal way
 
 ```java
         GlideToVectorYou
@@ -36,7 +58,7 @@ The svg will be automatically downloaded and inserted in your target Image View.
                     }
                 })
                 .setPlaceHolder(placeholderLoading, placeholderError)
-                .load(Uri.parse(IMAGE_URL), imageview); 
+                .load(IMAGE_URL, imageview); 
 ```
 
 Here you have more methods to customize the behaviour of *GlideToVectorYou*. You can for example:
@@ -45,7 +67,7 @@ Here you have more methods to customize the behaviour of *GlideToVectorYou*. You
 * show place holders while the image is loading or the loading failed with ```setPlaceHolder()```.
 
 
-### Advanced way
+## Advanced way
 If you are a **Glide pro**, you can ask *GlideToVectorYou* to give you access to the original Glide's ```RequestBuilder```.
 
 ```java
@@ -68,8 +90,8 @@ Again, for example, you could apply a custom transition or crop the image:
                 .into(imageView);
 ```
 
-### Licence
+## Licence
 This library is shared under **Apache License 2.0**.
 
-#### Made with ♥ by 2 Coffees 1 Tea(m).
+### Made with ♥ by 2 Coffees 1 Tea(m).
 We're Glid.. ehm... Glad to help you :D
