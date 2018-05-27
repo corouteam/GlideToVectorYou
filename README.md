@@ -23,7 +23,7 @@ Add JitPack in your **root *build.gradle*** at the end of repositories:
  
  ```
  	dependencies {
-	        implementation 'com.github.2coffees1team:GlideToVectorYou:v1.1.0'
+	        implementation 'com.github.2coffees1team:GlideToVectorYou:v1.0'
 	}
  ```
 
@@ -33,7 +33,7 @@ Add JitPack in your **root *build.gradle*** at the end of repositories:
 You just have to use a method:
 
 ```java
-GlideToVectorYou.justLoadImage(activity, IMAGE_URI, targetImageView)
+	GlideToVectorYou.justLoadImage(activity, IMAGE_URI, targetImageView)
 ```
 
 The svg will be automatically downloaded and inserted in your target Image View.
@@ -94,7 +94,7 @@ Again, for example, you could apply a custom transition or crop the image:
 If you need to load a .svg image as **backgroud** of a generic view, just call:
 
 ```java
-GlideToVectorYou.justLoadImageAsBackground(activity, IMAGE_URI, view)
+	GlideToVectorYou.justLoadImageAsBackground(activity, IMAGE_URI, view)
 ```
 
 
