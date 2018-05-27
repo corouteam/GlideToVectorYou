@@ -23,7 +23,7 @@ Add JitPack in your **root *build.gradle*** at the end of repositories:
  
  ```
  	dependencies {
-	        compile 'com.github.2coffees1team:GlideToVectorYou:v1.0'
+	        implementation 'com.github.2coffees1team:GlideToVectorYou:v1.1.0'
 	}
  ```
 
@@ -89,6 +89,14 @@ Again, for example, you could apply a custom transition or crop the image:
                         .centerCrop())
                 .into(imageView);
 ```
+
+## Set SVG as background
+If you need to load a .svg image as **backgroud** of a generic view, just call:
+
+```java
+GlideToVectorYou.justLoadImageAsBackground(activity, IMAGE_URI, view)
+```
+
 
 ## Licence
 This library is shared under **Apache License 2.0**.

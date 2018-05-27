@@ -30,5 +30,5 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.1.1'
 
 
-    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
 }

@@ -1,13 +1,18 @@
 package com.github.twocoffeesoneteam.glidetovectoryou;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.PictureDrawable;
 import android.net.Uri;
+import android.support.annotation.NonNull;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 
 public class GlideToVectorYou {
 
@@ -62,6 +67,15 @@ public class GlideToVectorYou {
         GlideApp.with(activity)
                 .as(PictureDrawable.class)
                 .listener(new SvgSoftwareLayerSetter()).load(uri).into(imageView);
+    }
+
+    public static void justLoadImageAsBackground(Activity activity, Uri uri, final View view) {
+        GlideApp.with(activity).load(uri).into(new SimpleTarget<Drawable>() {
+            @Override
+            public void onResourceReady(@NonNull Drawable resource, Transition<? super Drawable> transition) {
+                view.setBackground(resource);
+            }
+        });
     }
 
     public RequestBuilder<PictureDrawable> getRequestBuilder() {
