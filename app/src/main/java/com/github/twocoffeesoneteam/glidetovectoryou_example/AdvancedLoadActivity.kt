@@ -2,7 +2,7 @@ package com.github.twocoffeesoneteam.glidetovectoryou_example
 
 import android.graphics.drawable.PictureDrawable
 import android.net.Uri
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import com.bumptech.glide.RequestBuilder
