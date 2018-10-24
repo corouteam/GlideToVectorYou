@@ -1,3 +1,6 @@
+[![](https://jitpack.io/v/2coffees1team/GlideToVectorYou.svg)](https://jitpack.io/#2coffees1team/GlideToVectorYou)
+
+
 # GlideToVectorYou
 Load SVGs with Glide
 
@@ -23,9 +26,9 @@ Add JitPack in your **root *build.gradle*** at the end of repositories:
  
  Add the dependency in your **app *build.gradle***:
  
- ```
+ ```gradle
  	dependencies {
-	        implementation 'com.github.2coffees1team:GlideToVectorYou:v1.1.0'
+	        implementation 'com.github.2coffees1team:GlideToVectorYou:v1.2.0'
 	}
  ```
 
