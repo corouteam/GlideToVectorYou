@@ -1,6 +1,7 @@
 package com.github.twocoffeesoneteam.glidetovectoryou;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.PictureDrawable;
 import android.net.Uri;
@@ -18,7 +19,6 @@ public class GlideToVectorYou {
 
     private static GlideToVectorYou instance;
 
-    private Activity activity;
     private RequestBuilder<PictureDrawable> requestBuilder;
     private int placeHolderLoading = -1;
     private int placeHolderError = -1;
@@ -31,9 +31,8 @@ public class GlideToVectorYou {
         return instance;
     }
 
-    public GlideToVectorYou with(Activity activity){
-        this.activity = activity;
-        createRequestBuilder();
+    public GlideToVectorYou with(Context ctx){
+        createRequestBuilder(ctx);
 
         return instance;
     }
@@ -56,7 +55,8 @@ public class GlideToVectorYou {
             requestBuilder.apply(
                     new RequestOptions()
                             .placeholder(placeHolderLoading)
-                            .error(placeHolderError));
+                            .error(placeHolderError)
+            );
         }
 
         requestBuilder.load(uri).into(imageView);
@@ -82,8 +82,8 @@ public class GlideToVectorYou {
         return requestBuilder;
     }
 
-    private void createRequestBuilder(){
-        requestBuilder = GlideApp.with(activity)
+    private void createRequestBuilder(Context ctx){
+        requestBuilder = GlideApp.with(ctx)
                 .as(PictureDrawable.class)
                 .diskCacheStrategy(DiskCacheStrategy.DATA)
                 .listener(new SvgSoftwareLayerSetter());
