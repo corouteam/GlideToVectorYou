@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import com.bumptech.glide.RequestBuilder
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou
 import kotlinx.android.synthetic.main.activity_load.*
 
@@ -27,6 +28,7 @@ class AdvancedLoadActivity : AppCompatActivity() {
         // Customize request like you were using Glide normally
         requestBuilder
                 .load((Uri.parse(IMAGE_URL)))
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .into(imageview)
     }
 }
