@@ -9,7 +9,7 @@ GlideToVectorYou enables you to easily load your remote vector images (only .svg
 
 The library is based on Glide and offers the same functionalities + svg support.
 
-Changelog available [here](https://github.com/2coffees1team/GlideToVectorYou/releases).
+Changelog available [here](https://github.com/corouteam/GlideToVectorYou/releases).
 
 ## How to use
 
@@ -28,7 +28,7 @@ Add JitPack in your **root *build.gradle*** at the end of repositories:
  
  ```gradle
  	dependencies {
-	        implementation 'com.github.2coffees1team:GlideToVectorYou:v1.2.0'
+	        implementation 'com.github.corouteam:GlideToVectorYou:v2.0.0'
 	}
  ```
 
@@ -106,5 +106,5 @@ If you need to load a .svg image as **backgroud** of a generic view, just call:
 ## Licence
 This library is shared under **Apache License 2.0**.
 
-### Made with ♥ by 2 Coffees 1 Tea(m).
+### Made with ♥ by Corouteam
 We're Glid.. ehm... Glad to help you :D
